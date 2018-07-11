@@ -9,6 +9,11 @@
 
 .post-blog {
     padding-bottom: 30px;
-    border-bottom: 1px solid #ccc;
+    background-image: linear-gradient(to right, rgba(200, 200, 200, 0),
+    rgba(200, 200, 200, 1),
+    rgba(200, 200, 200, 0));
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
     margin-bottom: 20px;
+    background-position: bottom center;
 }

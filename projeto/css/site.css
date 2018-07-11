@@ -14,6 +14,7 @@ h2,
 h1 {
     text-transform: uppercase;
     font-size: 300%;
+    text-shadow: 2px 2px #000;
 }
 
 .titulo-principal {
@@ -57,7 +58,14 @@ main p {
 }
 
 .rodape-pagina {
-    background-color: #000;
+    background-image: radial-gradient(ellipse at left bottom, rgba(60, 29, 61, 0.8),
+    rgba(60, 29, 61, 0.8) 65%,
+    black 65%,
+    black 70%,
+    transparent 70%,
+    transparent);
+    background-size: 25% 100%;
+    background-repeat: no-repeat;
     color: #F2FFFC;
     padding: 20px;
     clear: both;
@@ -66,6 +74,7 @@ main p {
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    text-shadow: 1px 1px #000;
 }
 
 .container {
@@ -128,7 +137,11 @@ main {
 
 .minha-foto {
     position: absolute;
+    display: inline-block;
     top: 0;
     right: 0;
     height: 300px;
 }
+
+
+
