@@ -108,6 +108,16 @@
     right: 4em;
     height: 8em;
     padding: 1.5em;
+    display: none;
+}
+.blog a:hover + .inicio-post,
+.blog a:focus + .inicio-post {
+    display: block;
+}
+.blog a:hover,
+.blog a:focus {
+    background-color: #F2FFFC;
+    color: #F26;
 }
 
 .blog .mais-recente {
@@ -177,17 +187,12 @@ header {
     margin-bottom: .5em;
 }
 .trabalhos {
-    background-image: linear-gradient(135deg,
-                        transparent,
-                        transparent 14px,
-                        rgba(0, 0, 0, 0.1) 14px,
-                        rgba(0, 0, 0, 0.1) 15px,
-                        transparent 15px,
-                        transparent);
-    background-size: 20px 20px;
-    background-attachment: fixed;
+    background-color: #3C1D3D;
     border-top: .5em solid #000;
     border-bottom: .5em solid #000;
+    background-image: linear-gradient(135deg, transparent, transparent 14px, rgba(0,0,0,.1) 14px, rgba(0,0,0,.1) 15px transparent 15px, transparent);
+    background-size: 20px 20px;
+    background-attachment: fixed;
 }
 .trabalhos h2 {
     color: #FFF;
@@ -205,18 +210,13 @@ header {
     display: block;
 }
 .blog {
-    background-image: linear-gradient(45deg,
-                        transparent,
-                        transparent 14px,
-                        rgba(255, 255, 255, 0.1) 14px,
-                        rgba(255, 255, 255, 0.1) 15px,
-                        transparent 15px,
-                        transparent);
+    background-color: #999;
+    position: relative;
+    background-image: linear-gradient(45deg, transparent, transparent 14px, rgba(255,255,255,.1) 14px, rgba(255,255,255,.1) 15px, transparent 15px, transparent);
     background-size: 20px 20px;
     background-attachment: fixed;
     color: #FFF;
     border-bottom: .5em solid #851944;
-    position: relative;
 }
 .blog small {
     position: relative;

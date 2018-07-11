@@ -29,7 +29,9 @@ h1 {
     font-size: 30px;
     clear: both;
 }
-
+.navegacao-site a:hover, .navegacao-site a:focus {
+    text-shadow: 0px 0px 2px pink;
+}
 main a {
     color: #851944;
 }
@@ -37,6 +39,13 @@ main a {
 main p {
     text-align: justify;
     margin: 20px 0;
+}
+main a:hover,
+main a:focus,
+footer a:hover,
+footer a:focus {
+    color: #F00;
+
 }
 
 .navegacao-site {
