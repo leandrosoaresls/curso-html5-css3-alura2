@@ -26,3 +26,23 @@
 .citacao-bio:nth-of-type(even):hover, .citacao-bio:nth-of-type(even):focus  {
     transform: scale(1.2) rotate(-5deg);
 }
+
+.container > p::first-letter {
+    font-size: 200%;
+    color: #3C1D3D;
+    font-weight: bold;
+    text-shadow: 1px 1px #000;
+    margin-right: .2ch;
+    line-height: 1;
+}
+
+.citacao-bio::before {
+    content: '"';
+    font-size: 10em;
+    color: #bbb;
+    position: absolute;
+    line-height: .8;
+}
+.citacao-bio > p {
+    position: relative;
+}
