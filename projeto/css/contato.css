@@ -3,7 +3,7 @@ legend, label[for="msg"]{
     margin-top: 1em;
 }
 
-label[for:nome], label[for:email], label[for:msg] {
+label[for="nome"], label[for="email"], label[for="msg"] {
     display: block;
 }
 
