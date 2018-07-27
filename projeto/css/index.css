@@ -1,7 +1,4 @@
 /* inicio palavras titulo principal */
-.palavras-home li {
-    font-size: 400%;
-}
 .eficiencia {
     position: absolute;
     top: 50%;
@@ -95,8 +92,24 @@
     font-family: 'Shadows Into Light', cursive;
     color: rgba(255, 127, 127, 0.5);
     font-weight: bold;
+    -webkit-animation: aparece 2s;
+    animation: aparece 2s;
 }
-
+.palavras-home li {
+    font-size: 400%;
+}
+@-webkit-keyframes aparece {
+    0% {
+        opacity: 0;
+        transform: scale(0.001);
+    }
+}
+@keyframes aparece {
+    0% {
+        opacity: 0;
+        transform: scale(0.001);
+    }
+}
 /* fim palavras titulo principal */
 
 .blog .inicio-post {
@@ -165,7 +178,23 @@ header {
     font-size: 4em;
     transform: rotate(-5deg) skew(-10deg);
     display: inline-block;
+    animation: flutuar 1s infinite;    
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    position: relative;
 }
+.saudacao em:hover {
+    animation-play-state: paused;
+}
+@keyframes flutuar {
+    0% {
+        top: 5px;
+    }
+    100% {
+        top: -5px;
+    }
+}
+
 .botao-index {
     font-size: 1.25em;
     background-color: #851944;
@@ -176,6 +205,8 @@ header {
     text-align: center;
     padding: .5em;
     margin: 2em auto;
+    transition: .5s;
+    text-decoration: none;
 }
 .secao-inicio {
     padding: 2em;
@@ -198,17 +229,28 @@ header {
     color: #FFF;
 }
 .trabalhos ul {
-    overflow: hidden;
-    border: .5em solid black;
+    display: flex;
+    justify-content: space-between;
 }
 .trabalhos li {
-    float: left;
-    width: 33.333%;
+    flex: 1;
+    border: .5em solid #000;
+}
+.trabalhos li:first-child {
+    order: 2;
+    transform: scale(1.2);
+}
+.trabalhos li:nth-child(2) {
+    order: 1;
+}
+.trabalhos li:last-child {
+    order: 3;
 }
 .trabalhos img {
     width: 100%;
     display: block;
 }
+
 .blog {
     background-color: #999;
     position: relative;
@@ -263,6 +305,10 @@ main {
     transform: translate(calc(.707 * (3.5em - 100%) + 100%), calc(-.707 * 3.5em)) rotate(45deg);
     text-align: center;
     font-size: 1.2em;
+
+    animation: aparece .5s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
 }
 .palavras-home {
     position: absolute;
@@ -280,8 +326,16 @@ html, body {
 body {
     perspective: 6px;
     perspective-origin: 50% 160px;
+    display: block;
 }
 
 .palavras-home, .titulo-principal {
     transform-style: preserve-3d;
+}
+
+.botao-index:hover, 
+.botão-index:focus {
+    box-shadow: 0 0 1em #FA9;
+    background-color: #C54974;
+    color: #FFF;
 }
